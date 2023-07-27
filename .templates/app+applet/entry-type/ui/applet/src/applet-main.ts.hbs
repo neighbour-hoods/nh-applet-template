@@ -1,10 +1,12 @@
+import 'lib/dist/questions/question/elements/create-{{kebab_case entry_type.name}}'
+import 'lib/dist/questions/question/elements/{{kebab_case entry_type.name}}-detail'
+
 {{#merge_scope previous_file_content "client!: AppAgentClient"}}
   @state()
   {{camel_case entry_type.name}}Hashes: ActionHash[] = [];  
 
   {{#merge_scope previous_scope_content "return html`"}}
-    {{previous_scope_content}}
-    <create-{{kebab_case entry_type.name}} @{{camel_case entry_type.name}}-created=${(e: CustomEvent) => { this.{{camel_case entry_type.name}}Hashes = [...this.{{camel_case entry_type.name}}Hashes, e.detail.{{camel_case entry_type.name}}Hash] }}></create-{{kebab_case entry_type.name}}>
-    ${this.{{camel_case entry_type.name}}Hashes.map(({{camel_case entry_type.name}}Hash) => html`<{{kebab_case entry_type.name}}-detail .{{camel_case entry_type.name}}Hash=${{{camel_case entry_type.name}}Hash}></{{kebab_case entry_type.name}}-detail>`)}
+    <create-{{kebab_case entry_type.name}} @{{camel_case entry_type.name}}-created=$\{(e: CustomEvent) => \{ this.{{camel_case entry_type.name}}Hashes = [...this.{{camel_case entry_type.name}}Hashes, e.detail.{{camel_case entry_type.name}}Hash] \}\}></create-{{kebab_case entry_type.name}}>
+    $\{this.{{camel_case entry_type.name}}Hashes.map(({{camel_case entry_type.name}}Hash) => html`<{{kebab_case entry_type.name}}-detail .{{camel_case entry_type.name}}Hash=$\{{{camel_case entry_type.name}}Hash\}></{{kebab_case entry_type.name}}-detail>`)\}
   {{/merge_scope}}
 {{/merge_scope}} 
