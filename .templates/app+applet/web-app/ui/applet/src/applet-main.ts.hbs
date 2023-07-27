@@ -16,6 +16,13 @@ export class AppletMain extends LitElement {
     return html`
     `;
   }
+  
+  async firstUpdated() {
+    await this.initStores(this.client);
+  }
+
+  async initStores(appAgentClient: AppAgentClient) {
+  }
 
   static styles = [
     css`
