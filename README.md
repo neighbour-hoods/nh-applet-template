@@ -1,5 +1,5 @@
 # NH Applet Scaffolding Template
-This repository contains a webhapp template for the [holochain scaffolding tool]().
+This repository contains a webhapp template for the [holochain scaffolding tool](https://github.com/holochain/scaffolding).
 
 ## Getting Started
 To use it, start by running:
@@ -29,4 +29,4 @@ Build your applet:
 npm run package:applet
 ```
 
-Which will bundle a `.webhapp` file that can be loaded into the NH-launcher.
+Which will bundle a `.webhapp` file that can be loaded into the [NH-launcher](https://github.com/neighbour-hoods/nh-launcher).
