@@ -2,6 +2,7 @@ import 'lib/dist/{{dna_role_name}}/{{kebab_case coordinator_zome_manifest.name}}
 import 'lib/dist/{{dna_role_name}}/{{kebab_case coordinator_zome_manifest.name}}/elements/{{kebab_case entry_type.name}}-detail'
 
 {{#merge_scope previous_file_content "client!: AppAgentClient"}}
+  
   @state()
   {{camel_case entry_type.name}}Hashes: ActionHash[] = [];  
 
