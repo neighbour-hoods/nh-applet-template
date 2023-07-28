@@ -2,7 +2,9 @@
 This repository contains a webhapp template for the [holochain scaffolding tool](https://github.com/holochain/scaffolding).
 
 ## Getting Started
-To use it, start by running:
+This guide assumes you have the [holochain nix environment](https://developer.holochain.org/quick-start/) set up.
+
+Then, start by running:
 ```bash
 nix run github:holochain/holochain#hc-scaffold -- web-app --templates-url https://github.com/neighbour-hoods/nh-applet-template
 ```
